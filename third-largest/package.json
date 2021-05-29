@@ -1,0 +1,14 @@
+{
+  "name": "thirdlargest",
+  "version": "1.0.0",
+  "description": "find the third largest value of an array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dilshika bandara",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
