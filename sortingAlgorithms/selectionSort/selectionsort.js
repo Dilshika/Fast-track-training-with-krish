@@ -3,6 +3,10 @@ module.exports = function selectionSort(array) {
     let size = array.length,
         min, i, j;
 
+    if (size < 2) {
+        return array;
+    }
+
     for (i = 0; i < size; i++) {
 
         min = i;
