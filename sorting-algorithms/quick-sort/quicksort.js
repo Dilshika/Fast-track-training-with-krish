@@ -16,11 +16,11 @@ const partition = (array, left, right) => {
     let pivotValue = array[right];
     let pivotIndex = left;
 
-    for (let i = left; i < right; i++) {
+    for (let index = left; index < right; index++) {
 
-        if (array[i] < pivotValue) {
+        if (array[index] < pivotValue) {
             // Swapping elements
-            swap(array, pivotIndex, i);
+            swap(array, pivotIndex, index);
             // Moving to next element
             pivotIndex++;
         }

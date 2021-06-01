@@ -7,20 +7,20 @@
          return array;
      }
 
-     for (let i = 0; i < size; i++) {
+     for (let index = 0; index < size; index++) {
 
-         min = i;
+         minIndex = index;
 
          // check for the minimum
-         for (let j = i + 1; j < size; j++) {
-             if (array[j] < array[min]) {
-                 min = j;
+         for (let currentIndex = index + 1; currentIndex < size; currentIndex++) {
+             if (array[currentIndex] < array[minIndex]) {
+                 minIndex = currentIndex;
              }
          }
 
          // if the minimum isn't in the position, swap it
-         if (i != min) {
-             swap(array, i, min);
+         if (index != minIndex) {
+             swap(array, index, minIndex);
          }
      }
 

@@ -6,9 +6,9 @@ const bubbleSort = (unsortedArray) => {
     }
 
     for (let index in unsortedArray) {
-        for (let j = 0; j < (size - index) - 1; j++) {
-            if (unsortedArray[j] > unsortedArray[j + 1]) {
-                swap(unsortedArray, j, j + 1);
+        for (let rowIndex = 0; rowIndex < (size - index) - 1; rowIndex++) {
+            if (unsortedArray[rowIndex] > unsortedArray[rowIndex + 1]) {
+                swap(unsortedArray, rowIndex, rowIndex + 1);
 
             }
         }

@@ -1,14 +1,14 @@
  const linearSearch = (array, value) => {
      const size = array.length;
-     let i = 0;
+     let index = 0;
      let isFound = false;
 
-     while (!isFound && i < size) {
-         if (value === array[i]) {
+     while (!isFound && index < size) {
+         if (value === array[index]) {
              isFound = true;
-             return (`${value} value found at: ${i}`);
+             return (`${value} value found at: ${index}`);
          } else {
-             i++;
+             index++;
          }
      }
 
