@@ -6,7 +6,7 @@
      }
  }
 
- module.exports = class BinaryTree {
+ class BinaryTree {
      constructor() {
          this.root = null;
      }
@@ -51,7 +51,6 @@
              if (node.left) {
                  traversal(node.left);
                  if (node.left.left === null && node.left.right === null) {
-                     //console.log(node.left)
                      result.push(node.left.data);
                  }
              }
@@ -59,7 +58,6 @@
              if (node.right) {
                  traversal(node.right);
                  if (node.right.left === null && node.right.right === null) {
-                     // console.log(node.right)
                      result.push(node.right.data);
                  }
              }
@@ -71,3 +69,5 @@
 
 
  }
+
+ module.exports = { BinaryTree }

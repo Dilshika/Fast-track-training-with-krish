@@ -6,7 +6,7 @@ class Node {
     }
 }
 
-module.exports = class BinaryTree {
+class BinaryTree {
     constructor() {
         this.root = null;
         //to take a count of nodes
@@ -21,7 +21,6 @@ module.exports = class BinaryTree {
         //if root node doesn't exists
         if (currentNode === null) {
             this.root = new Node(data);
-            // console.log(this.root);
             return this.root;
         } else {
             //Search index to insert the data
@@ -29,7 +28,7 @@ module.exports = class BinaryTree {
                 if (data < node.data) {
                     if (node.left === null) {
                         node.left = new Node(data);
-                        return node.left;
+                        return;
                     } else {
                         return searchIndex(node.left);
                     }
@@ -69,28 +68,7 @@ module.exports = class BinaryTree {
         return result;
     }
 
-    //breadth-first search -to check tree
-    breadthFirst() {
-        let result = [];
-        let queue = [];
-        queue.push(this.root);
-
-        while (queue.length) {
-            let currentNode = queue.shift();
-            result.push(currentNode);
-
-            //if queue has a left child push it to queue
-            if (currentNode.left) {
-                queue.push(currentNode.left);
-            }
-
-            //if queue has a right child push it to queue
-            if (currentNode.right) {
-                queue.push(currentNode.right);
-            }
-        }
-
-        return result;
-    }
 
 }
+
+module.exports = { BinaryTree }
