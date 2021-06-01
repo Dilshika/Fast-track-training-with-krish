@@ -1,6 +1,6 @@
  const findThirdLargest = (dataArray) => {
      if (dataArray.length < 2) {
-         console.log("There is no third Largest number");
+         return ("There is no third Largest number");
      } else {
          let i = 0;
          while (i !== 2) {
