@@ -2,11 +2,11 @@
      if (dataArray.length < 2) {
          return ("There is no third Largest number");
      } else {
-         let i = 0;
-         while (i !== 2) {
+         let count = 0;
+         while (count !== 2) {
              const index = findLargest(dataArray);
              dataArray.splice(index, 1);
-             i++;
+             count++;
          }
          const index = findLargest(dataArray);
          return ("Third Largest Value is: " + dataArray[index]);
