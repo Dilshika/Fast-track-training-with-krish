@@ -1,22 +1,20 @@
-module.exports = function countChar(sentence) {
+const countChar = (sentence) => {
     //create map to store counteach character
-    const charMap = new Map();
-    let key, count = 0;
-    for (let i = 0; i < sentence.length; i++) {
+    const resultMap = new Map();
 
-        key = sentence.charAt(i);
+    for (let character of sentence) {
 
-        //initialize map set character as key
-        charMap.set(key, count);
+        if (!resultMap.has(character)) {
+            const count = 1;
+            resultMap.set(character, count);
+        } else {
+            let existCount = resultMap.get(character)
+            resultMap.set(character, existCount + 1);
+        }
+
     }
-
-    for (let k = 0; k < sentence.length; k++) {
-        key = sentence.charAt(k);
-        let existCount = charMap.get(key);
-        charMap.set(key, existCount + 1);
-    }
-
-    console.log(charMap);
-    return charMap;
+    return resultMap;
 
 }
+
+module.exports = { countChar }

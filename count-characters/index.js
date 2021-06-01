@@ -4,12 +4,9 @@ const app = express();
 const port = 8000;
 
 app.get('/', (req, res) => {
-    let sentence = "This one is a testing sentence.".toLowerCase();
-
-    //remove white spaces
-    sentence = sentence.replace(/ /g, '');
-    const count = countChar(sentence);
-    res.send(count);
+    const sentence = "This one is a testing sentence.".toLowerCase().replace(/ /g, '');
+    const count = countChar;
+    res.send(count.countChar(sentence));
 })
 
 app.listen(port, () => {
