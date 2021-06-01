@@ -5,9 +5,9 @@ const app = express();
 const port = 8000;
 
 app.get('/', (req, res) => {
-    let array = [1, 2, 3, 8, 3, 0, 9, 7, 6];
-    const find = thirdLargest(array);
-    res.send(find);
+    let dataArray = [1, 2, 3, 8, 3, 0, 9, 7, 16];
+    const find = thirdLargest;
+    res.send(find.findThirdLargest(dataArray));
 });
 
 app.listen(port, () => {
