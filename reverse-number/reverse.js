@@ -1,4 +1,4 @@
-module.exports = function reverse(number) {
+const reverse = (number) => {
 
     let reverseNumber = 0;
 
@@ -9,6 +9,7 @@ module.exports = function reverse(number) {
 
     }
 
-    console.log(reverseNumber);
-    //return reverseNumber;
+    return reverseNumber;
 }
+
+module.exports = { reverse }

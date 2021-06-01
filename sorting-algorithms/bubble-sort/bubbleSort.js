@@ -1,24 +1,26 @@
-module.exports = function bubbleSort(array) {
-    let size = array.length;
+const bubbleSort = (unsortedArray) => {
+    const size = unsortedArray.length;
 
     if (size < 2) {
-        return array;
+        return unsortedArray;
     }
 
-    for (let i = 0; i < size; i++) {
-        for (let j = 0; j < (size - i) - 1; j++) {
-            if (array[j] > array[j + 1]) {
-                swap(array, j, j + 1);
+    for (let index in unsortedArray) {
+        for (let j = 0; j < (size - index) - 1; j++) {
+            if (unsortedArray[j] > unsortedArray[j + 1]) {
+                swap(unsortedArray, j, j + 1);
 
             }
         }
     }
 
-    return array;
+    return unsortedArray;
+}
+const swap = (unsortedArray, firstIndex, secondIndex) => {
+    let temp = unsortedArray[firstIndex];
+    unsortedArray[firstIndex] = unsortedArray[secondIndex];
+    unsortedArray[secondIndex] = temp;
 }
 
-function swap(array, firstIndex, secondIndex) {
-    let temp = array[firstIndex];
-    array[firstIndex] = array[secondIndex];
-    array[secondIndex] = temp;
-}
+
+module.exports = { bubbleSort }

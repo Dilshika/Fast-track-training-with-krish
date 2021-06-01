@@ -1,35 +1,37 @@
-module.exports = function selectionSort(array) {
+ const selectionSort = (array) => {
 
-    let size = array.length,
-        min, i, j;
+     const size = array.length;
+     let min;
 
-    if (size < 2) {
-        return array;
-    }
+     if (size < 2) {
+         return array;
+     }
 
-    for (i = 0; i < size; i++) {
+     for (let i = 0; i < size; i++) {
 
-        min = i;
+         min = i;
 
-        // check for the minimum
-        for (j = i + 1; j < size; j++) {
-            if (array[j] < array[min]) {
-                min = j;
-            }
-        }
+         // check for the minimum
+         for (let j = i + 1; j < size; j++) {
+             if (array[j] < array[min]) {
+                 min = j;
+             }
+         }
 
-        // if the minimum isn't in the position, swap it
-        if (i != min) {
-            swap(array, i, min);
-        }
-    }
+         // if the minimum isn't in the position, swap it
+         if (i != min) {
+             swap(array, i, min);
+         }
+     }
 
-    return array;
-}
+     return array;
+ }
 
 
-function swap(array, firstIndex, secondIndex) {
-    let temp = array[firstIndex];
-    array[firstIndex] = array[secondIndex];
-    array[secondIndex] = temp;
-}
+ const swap = (array, firstIndex, secondIndex) => {
+     let temp = array[firstIndex];
+     array[firstIndex] = array[secondIndex];
+     array[secondIndex] = temp;
+ }
+
+ module.exports = { selectionSort }

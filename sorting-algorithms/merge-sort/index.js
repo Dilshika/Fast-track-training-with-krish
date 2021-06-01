@@ -6,9 +6,9 @@ const app = express();
 const port = 8000;
 
 app.get('/', (req, res) => {
-    const array = [1, 2, 3, 8, 3, 0, 9, 7, 6];
-    const sort = mergeSort(array);
-    res.send(sort);
+    const array = [1, 2, 3, 8, 3, 0, 9, 7, 6, 21];
+    const sort = mergeSort;
+    res.send(sort.mergeSort(array));
 
 })
 

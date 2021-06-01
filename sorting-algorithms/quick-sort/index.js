@@ -9,8 +9,8 @@ app.get('/', (req, res) => {
     const array = [1, 2, 3, 8, 60, 3, 0, 9, 7, 6, 25];
     let left = 0,
         right = array.length - 1;
-    const sort = quickSort(array, left, right);
-    res.send(sort);
+    const sort = quickSort;
+    res.send(sort.quickSort(array, left, right));
 
 })
 

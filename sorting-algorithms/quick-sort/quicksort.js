@@ -1,4 +1,4 @@
-module.exports = function quickSort(array, left, right) {
+const quickSort = (array, left, right) => {
 
     if (left >= right) {
         return;
@@ -8,17 +8,15 @@ module.exports = function quickSort(array, left, right) {
     quickSort(array, left, index - 1);
     quickSort(array, index + 1, right);
 
-
     return array;
 }
 
-function partition(array, left, right) {
+const partition = (array, left, right) => {
     // Taking the last element as the pivot
     let pivotValue = array[right];
-    //console.log(pivotValue);
     let pivotIndex = left;
-    let i;
-    for (i = left; i < right; i++) {
+
+    for (let i = left; i < right; i++) {
 
         if (array[i] < pivotValue) {
             // Swapping elements
@@ -34,8 +32,10 @@ function partition(array, left, right) {
     return pivotIndex;
 };
 
-function swap(array, firstIndex, secondIndex) {
+const swap = (array, firstIndex, secondIndex) => {
     let temp = array[firstIndex];
     array[firstIndex] = array[secondIndex];
     array[secondIndex] = temp;
 }
+
+module.exports = { quickSort }

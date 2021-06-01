@@ -1,15 +1,15 @@
-module.exports = function mergeSort(array) {
-    let size = array.length;
+const mergeSort = (array) => {
+    const size = array.length;
     if (size < 2) {
         return array;
     }
-    let mid = Math.floor(size / 2);
+    const mid = Math.floor(size / 2);
     let leftArray = array.splice(0, mid);
     let rightArray = array;
     return merge(mergeSort(leftArray), mergeSort(rightArray));
 };
 
-function merge(leftArray, rightArray) {
+const merge = (leftArray, rightArray) => {
     let sortedArray = [];
 
     while (leftArray.length && rightArray.length) {
@@ -31,3 +31,5 @@ function merge(leftArray, rightArray) {
 
     return sortedArray;
 }
+
+module.exports = { mergeSort }

@@ -4,9 +4,9 @@ const app = express();
 const port = 8000;
 
 app.get('/', (req, res) => {
-    var array = [1, 2, 3, 8, 3, 0, 9, 7, 6];
-    const sort = bubbleSort(array);
-    res.send(sort);
+    var unsortedArray = [1, 2, 3, 8, 3, 0, 9, 7, 6];
+    const sort = bubbleSort;
+    res.send(sort.bubbleSort(unsortedArray));
 });
 
 app.listen(port, () => {

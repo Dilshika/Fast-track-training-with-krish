@@ -5,9 +5,9 @@ const app = express();
 const port = 8000;
 
 app.get('/', (req, res) => {
-    let array = [1, 2, 3, 8, 3, 0, 9, 7, 6];
-    const sort = selectionSort(array);
-    res.send(sort);
+    let unsortedArray = [1, 2, 3, 8, 3, 0, 9, 7, 6];
+    const sort = selectionSort;
+    res.send(sort.selectionSort(unsortedArray));
 });
 
 app.listen(port, () => {
