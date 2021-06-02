@@ -5,8 +5,8 @@ const port = 8000;
 
 app.get('/', (req, res) => {
     let sequence = [1, 5, 4, 6, 2];
-    const find = missingOne(sequence);
-    res.send(find);
+    const find = missingOne;
+    res.send(find.findMiss(sequence));
 })
 
 app.listen(port, () => {

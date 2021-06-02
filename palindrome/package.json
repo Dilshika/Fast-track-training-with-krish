@@ -1,0 +1,15 @@
+{
+  "name": "palindrome",
+  "version": "1.0.0",
+  "description": "check palindrome",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dilshika bandara",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1"
+  }
+}

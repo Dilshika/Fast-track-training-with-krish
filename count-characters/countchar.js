@@ -2,7 +2,7 @@ const countChar = (sentence) => {
     //create map to store counteach character
     const resultMap = new Map();
 
-    for (let character of sentence) {
+    for (const character of sentence) {
 
         if (!resultMap.has(character)) {
             const count = 1;

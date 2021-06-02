@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <hr/>
+    <div class="body">
+        <div class="row">
+            <div class="col-md-2"> <label name="find-fibonacci">Enter Index</label></div>
+            <div class="col-md-2"><input type="number" id="inputNumber" name="inputNumber" min="0" required [(ngModel)]="inputNumber" /></div>
+            <div class="col-md-1"><button type="button" class="btn btn-primary" (click)="submitNumber()" [disabled]="clickedEnter">Enter</button></div>
+            <div class="col-md-1"><button type="button" class="btn btn-primary" (click)="clearNumber()" [disabled]="!clickedEnter">Clear</button></div>
+        </div>
+        <div class="row" *ngIf="clickedEnter">
+            <div class="col-md-4">
+                <label>Fibonacci number of place {{inputNumber}}   is {{outputNumber}}</label>
+            </div>
+        </div>
+
+
+    </div>
+</div>

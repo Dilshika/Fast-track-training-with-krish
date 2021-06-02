@@ -1,7 +1,6 @@
  const selectionSort = (array) => {
 
      const size = array.length;
-     let min;
 
      if (size < 2) {
          return array;
@@ -9,7 +8,7 @@
 
      for (let index = 0; index < size; index++) {
 
-         minIndex = index;
+         let minIndex = index;
 
          // check for the minimum
          for (let currentIndex = index + 1; currentIndex < size; currentIndex++) {

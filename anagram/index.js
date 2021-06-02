@@ -4,10 +4,10 @@ const app = express();
 const port = 8000;
 
 app.get('/', (req, res) => {
-    let word1 = "boss listen";
-    let word2 = "sobs silent";
-    const find = anagram(word1, word2)
-    res.send(find);
+    const word1 = "boss listen";
+    const word2 = "sobs silent";
+    const find = anagram;
+    res.send(find.anagram(word1, word2));
 })
 
 app.listen(port, () => {
