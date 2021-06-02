@@ -51,7 +51,7 @@ class BinaryTree {
 
 
     //in-order traversal left-->root-->right
-    preOrder() {
+    inOrder() {
         let result = [];
         let currentNode = this.root;
         //to push values

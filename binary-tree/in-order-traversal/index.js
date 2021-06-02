@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     tree.insert(130);
     tree.insert(115);
 
-    res.send('in-order traversal:' + tree.preOrder());
+    res.send('in-order traversal:' + tree.inOrder());
 
 })
 
