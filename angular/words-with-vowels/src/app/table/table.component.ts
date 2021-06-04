@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-display-page',
-  templateUrl: './display-page.component.html',
-  styleUrls: ['./display-page.component.scss']
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.scss']
 })
-export class DisplayPageComponent implements OnInit {
+export class TableComponent implements OnInit {
 
 
   @Input() paragraph:string='';
@@ -18,13 +18,12 @@ export class DisplayPageComponent implements OnInit {
 
 
   findWordsWithVowels(){
-    const words= this.paragraph.toLocaleLowerCase().split(" ");
+    let words= this.paragraph.toLocaleLowerCase().split(" ");
     for(let word of words){
       if(word.charAt(0).match(/[aeiou]/g)){
         this.resultArray.push(word);
       }
     }
-     console.log(this.resultArray.sort());
      return this.resultArray.sort();
    }
 }
