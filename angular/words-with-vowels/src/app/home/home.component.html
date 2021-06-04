@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header">
+        <h3>{{title}}</h3>
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+            <div class="form-group">
+                <label>Enter/Copy the Paragraph Here:</label>
+                <textarea class="form-control" id="paragraph" name="paragraph" [(ngModel)]="paragraph" required rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4"><button type="button" class="btn btn-primary btn-sm" (click)="onSubmit()">Enter</button>
+                    <button type="button" class="btn btn-primary btn-sm" (click)="onClear()" [disabled]="!submitted">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card" style="padding-top: 1%;" *ngIf="submitted">
+    <div class="header">
+        <h4>Words with Vowels in ascensing order</h4>
+    </div>
+    <div class="body">
+        <app-display-page [paragraph]="paragraph"></app-display-page>
+    </div>
+</div>

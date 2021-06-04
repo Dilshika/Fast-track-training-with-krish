@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <td>Index</td>
+                <td>Word</td>
+            </tr>
+            <tr *ngFor="let word of resultArray;index as index ">
+                <td>{{index+1}}</td>
+                <td>{{word}}</td>
+            </tr>
+
+        </table>
+
+    </div>
+</div>
