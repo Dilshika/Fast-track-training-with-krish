@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-header">
+        <h5>Display Value</h5>
+    </div>
+    <div class="body">
+        <div class="col-md-6">
+            <app-text-field></app-text-field>
+        </div>
+        <div class="col-md-2">
+            <app-button (clickEvent)="display()"></app-button>
+        </div>
+        <div class="col-md-6">
+            <app-label *ngIf="isClicked" [displayText]="sampleText"></app-label>
+        </div>
+    </div>
+</div>
