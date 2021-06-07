@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="inputNumber">Enter a postive number</label>
+            </div>
+            <div class="col-md-2">
+                <input type="number" id="inputNumber" name="inputNumber" #inputNumber>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" (click)="sendValue(inputNumber.value)">Enter
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

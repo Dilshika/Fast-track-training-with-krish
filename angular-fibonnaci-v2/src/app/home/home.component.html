@@ -1,0 +1,12 @@
+<app-input (sendValueEvent)="recieveValue($event)"></app-input>
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="output" (sendValueEvent)="recieveValue($event)">
+                    Fibonacci number of place {{value}} is {{outputValue}}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
