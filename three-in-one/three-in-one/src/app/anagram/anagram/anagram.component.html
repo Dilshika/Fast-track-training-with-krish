@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                <input type="text" name="firstWord" id="firstWord" required [(ngModel)]="firstWord">
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="secondWord" id="secondWord" required [(ngModel)]="secondWord">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+            </div>
+            <div class="col-md-2">
+                <button type="reset" (click)="reset()" class="btn btn-primary">Reset</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="display" *ngIf="isClicked">{{displayResponse}}</label>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                <input type="number" name="data" id="data" [(ngModel)]="data">
+            </div>
+            <div class="col-md-2"><button class="btn btn-primary" (click)="addtoArray()">Add to Array</button></div>
+            <div class="col-md-2">
+                <label for="displayArray" *ngFor="let ele of dataArray">{{ele}},</label>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 2%;">
+            <div class="col-md-2">
+                <input type="number" name="value" id="value" [(ngModel)]="value">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" (click)="onSubmit()">Submit Value</button>
+            </div>
+        </div>
+
+
+        <div class="row" style="padding-top: 2%;">
+            <label *ngIf="isClicked">{{value}} th largest number is {{displayData}}</label>
+        </div>
+
+    </div>
+</div>

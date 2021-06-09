@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-headr">
+        <h5>
+            Find Letter Occurance in a Sentence
+        </h5>
+    </div>
+    <div class="body">
+        <div class="row">
+            <div class="col-md-2">
+                <input type="text" name="sentence" id="sentence" [(ngModel)]="sentence">
+            </div>
+            <div class="col-md-2">
+                <button type="button" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" (click)="reset()" class="btn btn-primary">Reset</button>
+            </div>
+        </div>
+
+        <div class="row" style="padding-top: 2%;" *ngIf="isClicked">
+            <label *ngFor="let value of displayMap"> Occurance: {{value}}</label>
+        </div>
+
+    </div>
+</div>
