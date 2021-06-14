@@ -24,7 +24,6 @@ export class DisplayComponent implements OnInit {
     
     if((value%2) === 0){
       this.isEven=true;
-      console.log(this.isEven);
     }else{
       this.isEven=false;
     }
