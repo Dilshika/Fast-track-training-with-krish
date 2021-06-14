@@ -1,0 +1,9 @@
+<label for="display">{{displayValue}}</label>
+<div class="card">
+    <app-button (outputEvent)="onReceiveValue($event)"></app-button>
+</div>
+<ng-template [ngIf]="isEven">
+    <div>
+        <label>This is Even</label>
+    </div>
+</ng-template>
