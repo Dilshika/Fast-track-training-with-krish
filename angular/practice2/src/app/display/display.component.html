@@ -1,0 +1,6 @@
+<app-input (outputEvent)="getDate($event)"></app-input>
+<ng-template [ngIf]="isDateSet">
+    <div class="card">
+        <label for="display">{{displayDate|date:'fullDate'|uppercase}}</label>
+    </div>
+</ng-template>
