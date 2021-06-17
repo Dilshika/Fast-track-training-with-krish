@@ -1,0 +1,45 @@
+<table class="table table-bordered" *ngIf="Pet.length > 0">
+    <thead class="table-success">
+        <tr>
+            <th>Name</th>
+            <th>Breed</th>
+            <th> Age</th>
+            <th>Color</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pet of Pet">
+            <td class="text-center edit-block">
+                <span *ngIf="!pet.isEditClicked">{{pet.name}}</span>
+                <input *ngIf="pet.isEditClicked" type="text" name="pet.name" id="pet.name" [(ngModel)]="pet.name" />
+
+            </td>
+            <td class="text-center edit-block">
+                <span *ngIf="!pet.isEditClicked">{{pet.breed}}</span>
+                <input *ngIf="pet.isEditClicked" type="text" name="pet.breed" id="pet.breed" [(ngModel)]="pet.breed" />
+            </td>
+            <td class="text-center edit-block">
+                <span *ngIf="!pet.isEditClicked">{{pet.age}}</span>
+                <input *ngIf="pet.isEditClicked" type="text" name="pet.age" id="pet.age" [(ngModel)]="pet.age" />
+            </td>
+            <td class="text-center edit-block">
+                <span *ngIf="!pet.isEditClicked">{{pet.color}}</span>
+                <input *ngIf="pet.isEditClicked" type="text" name="pet.color" id="pet.color" [(ngModel)]="pet.color" />
+            </td>
+            <td class="text-center edit-block" *ngIf="!pet.isEditClicked">
+                <button class="btn btn-success" (click)="onClick(pet)">Edit</button>
+            </td>
+            <td class="text-center edit-block">
+                <button class="btn btn-danger" (click)="onDelete(pet._id)">Delete</button>
+            </td>
+            <td *ngIf="pet.isEditClicked">
+                <button class="btn btn-info" (click)="onUpdate(pet)">Update</button>
+            </td>
+            <td *ngIf="pet.isEditClicked">
+                <button class="btn btn-dark" (click)="onCancel(pet)">Cancel</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="row">
+        <div class="col-md-2">
+            <input type="text" name="name" id="name" [(ngModel)]="name" placeholder="Pet Name">
+        </div>
+        <div class="col-md-2">
+            <input type="text" name="breed" id="breed" [(ngModel)]="breed" placeholder="Breed">
+        </div>
+        <div class="col-md-2">
+            <input type="text" name="color" id="color" [(ngModel)]="color" placeholder="Color">
+        </div>
+        <div class="col-md-2">
+            <input type="text" name="age" id="age" [(ngModel)]="age" placeholder="0">
+        </div>
+        <div class="col md-2">
+            <button class="btn btn-primary" (click)="onSubmit()">Add</button>
+
+        </div>
+    </div>
+</div>
